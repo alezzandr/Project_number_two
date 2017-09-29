@@ -1,0 +1,18 @@
+<div>
+    <h1>Nobel Express Inc</h1>
+
+    <h3>Drivers:</h3>
+    <div>
+        <a href="/companies/new">Add New Driver</a>
+    </div>
+    {{#each companies}}
+        <div>
+            {{this.name}} - {{this.country}}
+            <a href="/companies/{{this._id}}">{{this.name}} Info</a>
+            <a href="/companies/{{this._id}}/snowboards">{{this.name}}'s Snowboards</a>
+        </div>
+    {{/each}}
+</div>
+
+
+

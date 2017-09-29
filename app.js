@@ -27,8 +27,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+// Register Controllers
+var indexController = require('./routes/indexController');
+app.use('/', indexController);
+
+const companyController = require('./routes/companyController')
+app.use('/companies', companyController)
+
+const snowboardController = require('./routes/snowboardController')
+app.use('/companies/:companyId/snowboards', snowboardController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
