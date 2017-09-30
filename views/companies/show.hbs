@@ -1,6 +1,11 @@
 <div>
     <h1>{{company.name}}</h1>
-    <div>Country: {{company.country}}</div>
+    <div>Driver's Licence Number: {{company.drivers_licence}}</div>
+    <div>Cellphone Number: {{company.cellphone_number}}</div>
+    <div>Driver Location: {{company.driver_location}}</div>
+    <div>Operate Truck #: {{company.operate_truck}}</div>
+    <div>Operate Trailer #: {{company.operate_trailer}}</div>
+
 
     <div>
         <a href="/companies">Back to Companies</a>
@@ -10,5 +15,8 @@
     </div>
     <div>
         <a href="/companies/{{company._id}}/delete">Delete</a>
+    </div>
+    <div>
+        <a href="/Trucks/">Truck</a>
     </div>
 </div>

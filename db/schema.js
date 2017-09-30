@@ -20,10 +20,32 @@ const CompanySchema = new Schema({
         required: true,
         unique: true
     },
-    country: {
+    drivers_licence: {
+        type: Number,
+        required: true
+    },
+
+    cellphone_number: {
+        type: Number,
+        required: true
+    },
+
+    driver_location: {
         type: String,
         required: true
     },
+
+    operate_truck: {
+        type: Number,
+        required: true
+    },
+
+    operate_trailer: {
+        type: Number,
+        required: true
+    },
+
+
     snowboards: [SnowboardSchema]
 });
 
